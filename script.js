@@ -1,6 +1,6 @@
 var paintings = [];
 function load(){
-fetch("https://cors-everywhere.herokuapp.com/clouddata.scratch.mit.edu/logs?projectid=219974802&limit=40&offset=0").then(function (j){return j.json()}).then(function (j){
+fetch("https://cors-anywhere.herokuapp.com/clouddata.scratch.mit.edu/logs?projectid=219974802&limit=40&offset=0").then(function (j){return j.json()}).then(function (j){
 for(var i = 0;i < j.length;i++){
 var p = {};
 if(j[i].verb === "create_var" || j[i].name === "☁ count"){continue;};
